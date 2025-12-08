@@ -1,0 +1,12 @@
+Source: ros-rolling-event-camera-tools
+Section: misc
+Priority: optional
+Maintainer: Bernd Pfrommer <bernd.pfrommer@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-auto, ros-rolling-ament-cmake-black <!nocheck>, ros-rolling-ament-cmake-clang-format <!nocheck>, ros-rolling-ament-cmake-ros, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-event-camera-codecs, ros-rolling-event-camera-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-ros-environment, ros-rolling-rosbag2-cpp, ros-rolling-rosbag2-storage, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-rolling-event-camera-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-event-camera-codecs, ros-rolling-event-camera-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-rosbag2-cpp, ros-rolling-rosbag2-storage, ros-rolling-sensor-msgs, ros-rolling-ros-workspace
+Description: package with ROS1 and ROS2 tools related to event_camera_msgs
