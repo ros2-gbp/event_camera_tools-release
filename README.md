@@ -1,3 +1,26 @@
+## event_camera_tools (rolling) - 3.1.0-1
+
+The packages in the `event_camera_tools` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --new-track --track rolling --rosdistro rolling event_camera_tools` on `Mon, 08 Dec 2025 16:25:39 -0000`
+
+The `event_camera_tools` package was released.
+
+Version of package(s) in repository `event_camera_tools`:
+
+- upstream repository: https://github.com/ros-event-camera/event_camera_tools.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `3.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## event_camera_tools (kilted) - 3.1.0-1
 
 The packages in the `event_camera_tools` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --new-track --track kilted --rosdistro kilted event_camera_tools` on `Mon, 08 Dec 2025 16:22:38 -0000`
