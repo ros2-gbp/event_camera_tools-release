@@ -1,0 +1,12 @@
+Source: ros-jazzy-event-camera-tools
+Section: misc
+Priority: optional
+Maintainer: Bernd Pfrommer <bernd.pfrommer@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-auto, ros-jazzy-ament-cmake-black <!nocheck>, ros-jazzy-ament-cmake-clang-format <!nocheck>, ros-jazzy-ament-cmake-ros, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-event-camera-codecs, ros-jazzy-event-camera-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-ros-environment, ros-jazzy-rosbag2-cpp, ros-jazzy-rosbag2-storage, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-event-camera-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-event-camera-codecs, ros-jazzy-event-camera-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rosbag2-cpp, ros-jazzy-rosbag2-storage, ros-jazzy-sensor-msgs, ros-jazzy-ros-workspace
+Description: package with ROS1 and ROS2 tools related to event_camera_msgs
