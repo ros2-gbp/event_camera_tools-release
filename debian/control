@@ -1,0 +1,12 @@
+Source: ros-humble-event-camera-tools
+Section: misc
+Priority: optional
+Maintainer: Bernd Pfrommer <bernd.pfrommer@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libopencv-dev, ros-humble-ament-cmake, ros-humble-ament-cmake-auto, ros-humble-ament-cmake-black <!nocheck>, ros-humble-ament-cmake-clang-format <!nocheck>, ros-humble-ament-cmake-ros, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-event-camera-codecs, ros-humble-event-camera-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-ros-environment, ros-humble-rosbag2-cpp, ros-humble-rosbag2-storage, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-event-camera-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopencv-dev, ros-humble-event-camera-codecs, ros-humble-event-camera-msgs, ros-humble-rclcpp, ros-humble-rclcpp-components, ros-humble-rosbag2-cpp, ros-humble-rosbag2-storage, ros-humble-sensor-msgs, ros-humble-ros-workspace
+Description: package with ROS1 and ROS2 tools related to event_camera_msgs
