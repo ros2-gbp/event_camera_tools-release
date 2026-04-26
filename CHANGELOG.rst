@@ -2,6 +2,12 @@
 Changelog for package event_camera_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.4 (2026-04-26)
+------------------
+* fix more c++ standard 20 warnings
+* fix c++ standard 20 warnings
+* Contributors: Bernd Pfrommer
+
 3.1.3 (2026-04-26)
 ------------------
 * fix c++ standard 20 warnings
