@@ -50,10 +50,7 @@ public:
 #ifdef USING_ROS_1
     writer_->open(bagName, rosbag::bagmode::Write);
 #else
-    rosbag2_storage::StorageOptions storage_options;
-    storage_options.uri = bagName;
-    storage_options.storage_id = "mcap";
-    writer_->open(storage_options);
+    writer_->open(bagName);
 #endif
     createTopic(topic);
     msg_.header.frame_id = frameId;
