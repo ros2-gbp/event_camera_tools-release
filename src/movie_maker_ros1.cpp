@@ -34,11 +34,8 @@ void usage()
   std::cout << "movie_maker -b name_of_bag_file -t topic -f fps" << std::endl;
 }
 
-static size_t process_bag(
-  const std::string & inFile, const std::string & outputDir, const std::string & topic,
-  const double fps)
+static size_t process_bag(const std::string & inFile, const std::string & topic, const double fps)
 {
-  std::filesystem::create_directories(outputDir);
   size_t numBytes(0);
   event_camera_codecs::DecoderFactory<EventPacket, event_camera_tools::MovieMaker> decoderFactory;
   rosbag::Bag bag;
@@ -46,8 +43,6 @@ static size_t process_bag(
   bag.open(inFile, rosbag::bagmode::Read);
   rosbag::View view(bag, rosbag::TopicQuery({topic}));
   event_camera_tools::MovieMaker maker;
-  maker.setOutputDir(outputDir);
-  maker.setTimeStampsFile(outputDir + "/" + "timestamps.txt");
   maker.setFramePeriod(1.0 / fps);
   ros::Time t0;
   for (const rosbag::MessageInstance & m : view) {
@@ -79,7 +74,6 @@ int main(int argc, char ** argv)
 
   std::string bagFile;
   std::string topic("/event_camera/events");
-  std::string outputDir("movie_frames");
   double fps(25);
   while ((opt = getopt(argc, argv, "b:t:f:h")) != -1) {
     switch (opt) {
@@ -110,8 +104,10 @@ int main(int argc, char ** argv)
     return (-1);
   }
 
+  std::filesystem::create_directories(std::string("movie_frames"));
+
   auto start = std::chrono::high_resolution_clock::now();
-  const size_t numBytes = process_bag(bagFile, outputDir, topic, fps);
+  const size_t numBytes = process_bag(bagFile, topic, fps);
   auto final = std::chrono::high_resolution_clock::now();
   auto total_duration = std::chrono::duration_cast<std::chrono::microseconds>(final - start);
 
