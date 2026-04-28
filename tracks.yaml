@@ -110,4 +110,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ros-event-camera/event_camera_tools.git
-    version: :{auto}
+    version: 3.1.2
+    version_saved: :{auto}
